@@ -15,6 +15,10 @@
         .raleway-font{
             font-family: "Raleway", sans-serif;
         }
+        .vl{
+    border: 2px solid grey;
+    height: 800px;
+  }
     </style>
 </head>
 <body class="raleway-font">
@@ -109,7 +113,7 @@
             <section class="container mx-auto lg:px-24 py-8 px-3 bg-slate-100">
                 <h1 class="text-center text-5xl font-bold">Starcom Paribahan</h1>
                 <p class="text-center mb-8">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
-                <div class="rounded-2xl bg-white px-16 flex flex-col lg:flex-row justify-between items-center">
+                <div class="rounded-2xl bg-white px-16 flex flex-col lg:flex-row justify-between items-center mb-10">
                     <div>
                         <nav>
                             <div class="navbar bg-base-100 flex flex-col lg:flex-row justify-between items-center gap-5">
@@ -167,6 +171,106 @@
 
                     </div>
 
+                </div>
+                <div class="rounded-2xl bg-white p-16 flex flex-col lg:flex-row justify-between items-center">
+                    <div>
+                        <h1>Select your seat</h1>
+                        <hr class="mb-5">
+                        <div class="flex flex-row justify-between items-center">
+                            <div class="flex flex-row">
+                                <img src="./images/seat-gray.png" alt="">
+                            <h1>  Available</h1>
+                            </div>  
+                            <div class="flex flex-row mb-5">
+                                <img src="./images/seat-green-filled.png" alt="">
+                            <h1 class="text-[#1DD100]">Selected</h1>
+                            </div>
+                        </div>
+                        <hr class="mb-5">
+                        <div class="grid grid-cols-4 mb-5 gap-x-5 gap-y-5 ">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div class="bg-slate-300 rounded-xl  p-3">
+                                <img src="./images/Screenshot_1.jpg" alt="">
+                            </div>
+                        </div>
+                        <!--dynamic-->
+                        <div class="grid grid-cols-4 gap-x-2 gap-y-2 p-5">
+                            <div class="bg-slate-300 rounded-xl text-center p-3">A1</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">A2</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">A3</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">A4</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">B1</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">B2</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">B3</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">B4</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">C1</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">C2</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">C3</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">C4</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">D1</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">D2</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">D3</div>
+                            <div class="bg-slate-300 rounded-xl text-center p-3">D4</div>
+                        </div>
+                    </div>
+                    <div class="vl hidden lg:block"></div>
+                    <div>
+                        <h1 class="">Select your seat</h1>
+                        <hr class="mb-5">
+                        <div class="bg-slate-100 p-11 mb-5">
+                           <div class="flex flex-row justify-between items-center ">
+                             <!--dynamic-->
+                             <h1>seats <sup class="bg-[#1DD100] font-bold text-xl text-white"><span>0</span></sup></h1>
+                             <h1>Class</h1>
+                             <h1>Price</h1>
+                           </div>
+                           <hr>
+                            <!--dynamic-->
+                        <div></div>
+                        <hr class="mb-5">
+                        <div class="flex flex-row justify-between items-center mb-5">
+                            <h1>Total Price</h1>
+                        <!--dynamic-->
+                        <h1>BDT <span> 0</span></h1>
+                        </div>
+                        <div class="mb-5 flex flex-row">
+                            <!--dynamic-->
+                            <input  type="text" placeholder="Type here" class="input input-bordered input-success w-full max-w-xs" />
+                            <!--dynamic-->
+                            <button class="btn bg-[#1DD100] text-white " disabled>Apply</button>
+                        </div>
+                        <div class="flex flex-row justify-between items-center">
+                            <h1>Grand Total</h1>
+                        <!--dynamic-->
+                        <h1>BDT <span> 0</span></h1>
+                        </div>
+                        
+                        </div>
+                        <div>
+                            <p class="font-bold">Passenger Name</p>
+                            
+
+
+                    <input type="text" placeholder="Type here" class="input input-bordered input-sm w-full max-w-xs mb-5" />
+                    <p  class="font-bold">Phone Number <sup class="text-2xl">*</sup></p>
+                    <!--dynamic-->
+                    <input type="text" placeholder="Type here" class="input input-bordered input-md w-full max-w-xs" />
+                    <p class="font-bold">Email Id</p>
+                    <input type="text" placeholder="Type here" class="input input-bordered input-lg w-full max-w-xs" />
+                </div>
+                <br>
+                <!--dynamic-->
+                <button class="btn btn-wide bg-[#1DD100] text-white mb-5" disabled>Next</button>
+                <br>
+
+                <div class="flex flex-row items-center gap-10">
+                    <a href="">Terms and conditions</a>
+                    <a href="">Cancellation Policy</a>
+                </div>
+
+                    </div>
                 </div>
 
             </section>

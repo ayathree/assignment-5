@@ -25,7 +25,7 @@
 
     <main>
         <!--part one-->
-        <section class="hidden">
+        <section id="home" class="">
             <nav class="container mx-auto lg:px-24 py-8 px-3">
                 <div class="navbar bg-base-100">
                     <div class="navbar-start">
@@ -52,7 +52,7 @@
                             <span class="text-[#1DD100]">Starcom Paribahan</span></h1>
                         <p class="py-6 text-white hidden lg:block">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
                         <!--dynamic-->
-                        <button class="btn bg-[#1DD100] text-black">Buy Tickets</button>
+                        <button  onclick="hiddenSection()"  class="btn bg-[#1DD100] text-black">Buy Tickets</button>
                       </div>
                     </div>
                   </div>
@@ -109,7 +109,7 @@
                </section>
         </section>
         <!--part two-->
-        <section class="hidden">
+        <section  id="form" class=" hidden">
             <section class="container mx-auto lg:px-24 py-8 px-3 bg-slate-100">
                 <h1 class="text-center text-5xl font-bold">Starcom Paribahan</h1>
                 <p class="text-center mb-8">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
@@ -130,7 +130,7 @@
                                      <button class="btn">
                                         <img src="./images/seat-green.png" alt="">
                                         <!--dynamic-->
-                                        <p class="text-[#1DD100]"><span>40</span> Seats left</p>
+                                        <p class="text-[#1DD100]"><span>16</span> Seats left</p>
                                      </button>
                                     </div>
                                 </div>
@@ -196,23 +196,27 @@
                             </div>
                         </div>
                         <!--dynamic-->
-                        <div class="grid grid-cols-4 gap-x-2 gap-y-2 p-5">
-                            <div class="bg-slate-300 rounded-xl text-center p-3">A1</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">A2</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">A3</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">A4</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">B1</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">B2</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">B3</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">B4</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">C1</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">C2</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">C3</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">C4</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">D1</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">D2</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">D3</div>
-                            <div class="bg-slate-300 rounded-xl text-center p-3">D4</div>
+                        <div class="flex flex-row justify-between items-center gap-8 cursor-pointer " >
+                            <div class="grid grid-cols-2 gap-x-3 gap-y-3 p-2" >
+                            <div id="A1" class="bg-slate-300 rounded-xl text-center p-5">A1</div>
+                            <div id="A2" class="bg-slate-300 rounded-xl text-center p-5">A2</div>
+                            <div id="B1" class="bg-slate-300 rounded-xl text-center p-5">B1</div>
+                            <div id="B2" class="bg-slate-300 rounded-xl text-center p-5">B2</div>
+                            <div id="C1" class="bg-slate-300 rounded-xl text-center p-5">C1</div>
+                            <div id="C2" class="bg-slate-300 rounded-xl text-center p-5">C2</div>
+                            <div id="D1" class="bg-slate-300 rounded-xl text-center p-5">D1</div>
+                            <div id="D4" class="bg-slate-300 rounded-xl text-center p-5">D4</div>
+                            </div>
+                            <div  class="grid grid-cols-2 gap-x-3 gap-y-3 p-2">
+                            <div id="A3" class="bg-slate-300 rounded-xl text-center p-5">A3</div>
+                            <div id="A4" class="bg-slate-300 rounded-xl text-center p-5">A4</div>
+                            <div id="B3" class="bg-slate-300 rounded-xl text-center p-5">B3</div>
+                            <div id="B4" class="bg-slate-300 rounded-xl text-center p-5">B4</div>
+                            <div id="C3" class="bg-slate-300 rounded-xl text-center p-5">C3</div>
+                            <div id="C4" class="bg-slate-300 rounded-xl text-center p-5">C4</div>
+                            <div id="D3" class="bg-slate-300 rounded-xl text-center p-5">D3</div>
+                            <div id="D4" class="bg-slate-300 rounded-xl text-center p-5">D4</div>
+                           </div>
                         </div>
                     </div>
                     <div class="vl hidden lg:block"></div>
@@ -262,7 +266,7 @@
                 </div>
                 <br>
                 <!--dynamic-->
-                <button class="btn btn-wide bg-[#1DD100] text-white mb-5" disabled>Next</button>
+                <button onclick=" showSection()" class="btn btn-wide bg-[#1DD100] text-white mb-5" disabled>Next</button>
                 <br>
 
                 <div class="flex flex-row items-center gap-10">
@@ -277,9 +281,9 @@
 
         </section>
         <!--part three-->
-        <section>
-            <section class="container mx-auto lg:px-24 py-8 px-3 mt-16 pb-20 bg-slate-200">
-                <div class="hero mt-16 bg-white">
+        <section id="confirm" class=" hidden">
+            <section class="container mx-auto lg:px-24 py-8 px-3 mt-16 pb-20 bg-white ">
+                <div class="hero mt-16 bg-slate-200 rounded-2xl">
                     <div class="hero-content text-center">
                       <div class="max-w-md">
                         <img class="lg:ml-40  ml-28" src="./images/success.png" alt="">
@@ -299,6 +303,8 @@
         </section>
         
         </main>
+        <script src="./scripts/utility.js"></script>
+        <script src="./scripts/bus.js"></script>
     
     
 </body>

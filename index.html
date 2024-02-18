@@ -231,26 +231,34 @@
                              <h1>Price</h1>
                            </div>
                            <hr>
-                            <!--dynamic-->
+                            <!--dynamic done-->
                         <div id="seat-text-area" class= " grid grid-cols-3 gap-x-10">
 
                         </div>
                         <hr class="mb-5">
                         <div class="flex flex-row justify-between items-center mb-5">
                             <h1>Total Price</h1>
-                        <!--dynamic-->
-                        <h1>BDT <span> 0</span></h1>
+                        <!--dynamic done-->
+                        <h1>BDT <span id="total-price"> 0</span></h1>
                         </div>
-                        <div class="mb-5 flex flex-row">
+                        <div id="apply" class="mb-5 flex flex-row">
                             <!--dynamic-->
-                            <input  type="text" placeholder="Type here" class="input input-bordered input-success w-full max-w-xs" />
+                            <input id="input-field" type="text" placeholder="Type here" class="input input-bordered input-success w-full max-w-xs" />
                             <!--dynamic-->
-                            <button class="btn bg-[#1DD100] text-white " disabled>Apply</button>
+                            <button id="apply-button" onclick="hiddenDiscount()"  class="btn bg-[#1DD100] text-white  ">Apply</button>
+                        </div>
+                        <!--dynamic done-->
+                        <div id="discount" class=" hidden" >
+                           <div  class="flex flex-row justify-between items-center mb-5">
+                            <h1>Discount Price</h1>
+                            <!--dynamic-->
+                            <h1>BDT <span id="discount-total"> 0</span></h1>
+                           </div>
                         </div>
                         <div class="flex flex-row justify-between items-center">
                             <h1>Grand Total</h1>
                         <!--dynamic-->
-                        <h1>BDT <span> 0</span></h1>
+                        <h1>BDT <span id="grand-total"> 0</span></h1>
                         </div>
                         
                         </div>
@@ -262,7 +270,7 @@
                     <input type="text" placeholder="Type here" class="input input-bordered input-sm w-full max-w-xs mb-5" />
                     <p  class="font-bold">Phone Number <sup class="text-2xl">*</sup></p>
                     <!--dynamic-->
-                    <input type="text" placeholder="Type here" class="input input-bordered input-md w-full max-w-xs" />
+                    <input type="tel" placeholder="Type here" class="input input-bordered input-md w-full max-w-xs" />
                     <p class="font-bold">Email Id</p>
                     <input type="text" placeholder="Type here" class="input input-bordered input-lg w-full max-w-xs" />
                 </div>

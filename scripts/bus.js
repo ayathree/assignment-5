@@ -15,6 +15,16 @@ function showSection() {
     
 }
 
+function hiddenDiscount() {
+    const buttonSection = document.getElementById('apply');
+    buttonSection.classList.add('hidden')
+    const discountSection = document.getElementById('discount');
+    discountSection.classList.remove('hidden')
+    
+    
+}
+
+
 // all seat access
 const allSeat = document.getElementsByClassName('bg-slate-300 rounded-xl text-center p-5')
 let seatCount = 0;
@@ -40,14 +50,52 @@ for (const seat of allSeat ) {
         
          seatTextArea.appendChild(p1);
         seatTextArea.appendChild(p2);
-        seatTextArea.appendChild(p3);
-        
+        seatTextArea.appendChild(p3); 
 
-        
-
-        
+// set price
+        totalCost('total-price', parseInt(seatPrice))
+        totalCost('grand-total', parseInt(seatPrice))  
 
     })
     
     
+    
 }
+// coupon part
+const applyButton =document.getElementById('apply-button');
+    applyButton.addEventListener('click', function (){
+
+        const couponApply = document.getElementById('input-field').value;
+        const couponCode = couponApply;
+        const CouponTwo = couponApply;
+        
+        if (couponCode === "NEW15" ) {
+            const discount15 = document.getElementById('discount-total');
+            const price = document.getElementById('total-price').innerText;
+            const total = parseInt(price);
+            const discount15Amount =  total* 0.15;
+            discount15.innerText = discount15Amount;
+            const grand = document.getElementById('grand-total');
+            const grandFinal = total-discount15Amount;
+            grand.innerText=grandFinal;
+            
+        }
+        else if(CouponTwo === "Couple 20"){
+            const discount20 = document.getElementById('discount-total');
+            const price = document.getElementById('total-price').innerText;
+            const total = parseInt(price);
+            const discount20Amount =  total* 0.2;
+            discount20.innerText = discount20Amount;
+            const grand = document.getElementById('grand-total');
+            const grandFinal = total-discount20Amount;
+            grand.innerText=grandFinal; 
+    
+        }
+        else{
+            alert("Invalid Coupon");
+        }
+        
+    })
+
+
+        

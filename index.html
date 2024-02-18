@@ -129,8 +129,8 @@
                                      
                                      <button class="btn">
                                         <img src="./images/seat-green.png" alt="">
-                                        <!--dynamic-->
-                                        <p class="text-[#1DD100]"><span>16</span> Seats left</p>
+                                        <!--dynamic done-->
+                                        <p class="text-[#1DD100]"><span id="seat-left">16</span> Seats left</p>
                                      </button>
                                     </div>
                                 </div>
@@ -164,8 +164,8 @@
                     <div>
                         <img src="./images/fare.png" alt="">
                         <br>
-                        <!--dynamic-->
-                        <h1 class="text-xl font-bold"><span>550</span> Taka</h1>
+                        <!--dynamic done-->
+                        <h1 class="text-xl font-bold"><span id="seat-price">550</span> Taka</h1>
                         <br>
                         <p>Per seat</p>
 
@@ -225,14 +225,16 @@
                         <hr class="mb-5">
                         <div class="bg-slate-100 p-11 mb-5">
                            <div class="flex flex-row justify-between items-center ">
-                             <!--dynamic-->
-                             <h1>seats <sup class="bg-[#1DD100] font-bold text-xl text-white"><span>0</span></sup></h1>
+                             <!--dynamic done-->
+                             <h1>seats <sup class="bg-[#1DD100] font-bold text-xl text-white p-1"><span id="seat-add">0</span></sup></h1>
                              <h1>Class</h1>
                              <h1>Price</h1>
                            </div>
                            <hr>
                             <!--dynamic-->
-                        <div></div>
+                        <div id="seat-text-area" class= " grid grid-cols-3 gap-x-10">
+
+                        </div>
                         <hr class="mb-5">
                         <div class="flex flex-row justify-between items-center mb-5">
                             <h1>Total Price</h1>

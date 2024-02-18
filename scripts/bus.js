@@ -1,13 +1,13 @@
 
 // hide show part
 function hiddenSection() {
-    const homeSection = document.getElementById('home');
-    homeSection.classList.add('hidden')
     const formSection = document.getElementById('form');
     formSection.classList.remove('hidden')
 }
 
 function showSection() {
+    const homeSection = document.getElementById('home');
+     homeSection.classList.add('hidden')
     const formSection = document.getElementById('form');
     formSection.classList.add('hidden');
     const confirmSection = document.getElementById('confirm');
@@ -29,15 +29,23 @@ function hiddenDiscount() {
 const allSeat = document.getElementsByClassName('bg-slate-300 rounded-xl text-center p-5')
 let seatCount = 0;
 let seatLeft = 16;
-for (const seat of allSeat ) {
-    seat.addEventListener('click', function (event) {
+let count =0;
 
-         seatCount = seatCount + 1;
-         setInnerText('seat-add', seatCount);
-         seatLeft = seatLeft -1;
-         setInnerText('seat-left', seatLeft);
-        const seatName = event.target.id
-        setBackgroundColor(seatName);
+for (const seat of allSeat ) {
+    
+    
+    seat.addEventListener('click', function (event) {
+        
+        seat.removeEventListener('click', arguments.callee);
+        count = count +1;
+        if (count <= 4) {
+            
+            seatCount = seatCount + 1;
+            setInnerText('seat-add', seatCount);
+            seatLeft = seatLeft -1;
+            setInnerText('seat-left', seatLeft);
+            const seatName = event.target.id
+            setBackgroundColor(seatName);
         const seatPrice = document.getElementById('seat-price').innerText;
         const seatClass = 'economy';
         const seatTextArea = document.getElementById('seat-text-area');
@@ -56,8 +64,15 @@ for (const seat of allSeat ) {
         totalCost('total-price', parseInt(seatPrice))
         totalCost('grand-total', parseInt(seatPrice))  
 
-    })
+   }
+    else{
+        seat.removeEventListener("click",  function (event){
     
+        });
+    }
+
+
+})   
     
     
 }

@@ -20,3 +20,12 @@ function totalCost(id, value) {
     setInnerText(id, sum);
     
  }
+
+
+// disable button after one click
+
+function setDisable(Id) {
+    const element = document.getElementById(Id);
+    element.disabled = true;
+    
+}

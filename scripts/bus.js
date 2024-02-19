@@ -16,8 +16,7 @@ function showSection() {
 }
 
 function hiddenDiscount() {
-    const buttonSection = document.getElementById('apply');
-    buttonSection.classList.add('hidden')
+    
     const discountSection = document.getElementById('discount');
     discountSection.classList.remove('hidden')
     
@@ -93,6 +92,8 @@ const applyButton =document.getElementById('apply-button');
             const grand = document.getElementById('grand-total');
             const grandFinal = total-discount15Amount;
             grand.innerText=grandFinal;
+            const buttonSection = document.getElementById('apply');
+    buttonSection.classList.add('hidden')
             
         }
         else if(CouponTwo === "Couple 20"){
@@ -104,6 +105,8 @@ const applyButton =document.getElementById('apply-button');
             const grand = document.getElementById('grand-total');
             const grandFinal = total-discount20Amount;
             grand.innerText=grandFinal; 
+            const buttonSection = document.getElementById('apply');
+    buttonSection.classList.add('hidden')
     
         }
         else{

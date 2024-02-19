@@ -7,14 +7,6 @@ function hiddenSection() {
     formSection.classList.remove('hidden')
 }
 
-function showSection() {
-   
-    const formSection = document.getElementById('form');
-    formSection.classList.add('hidden');
-    const confirmSection = document.getElementById('confirm');
-    confirmSection.classList.remove('hidden');
-    
-}
 
 function hiddenDiscount() {
     
@@ -66,16 +58,6 @@ for (const seat of allSeat ) {
          seatTextArea.appendChild(p1);
         seatTextArea.appendChild(p2);
         seatTextArea.appendChild(p3); 
-        // const apBtn = document.getElementsByClassName('btn apply bg-[#1DD100] text-white')
-        // console.log(apBtn)
-
-        // if (parseInt(seatPrice)===1650) {
-        //     apBtn.removeAttribute('disabled');    
-        // }
-        // else{
-        //     apBtn.setAttribute('disabled', true);
-        // }
-
 
             
         
@@ -142,5 +124,27 @@ applyButton.addEventListener('click', function (){
         
     })
 
+    
+
+    function phoneNumber() {
+        const phoneInput = document.getElementById('phone-number');
+        const nextButton = document.getElementById('next-btn');
+    
+        const phoneNumber = /^\d{11}$/;
+    
+        if (phoneNumber.test(phoneInput.value.trim())) {
+            nextButton.removeAttribute('disabled');
+       
+    }
+    else{
+        nextButton.setAttribute('disabled', true);
+    }
+}
+    
+     
+
 
         
+        
+        
+       

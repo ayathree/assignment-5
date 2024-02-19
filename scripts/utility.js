@@ -22,10 +22,5 @@ function totalCost(id, value) {
  }
 
 
-// disable button after one click
 
-function setDisable(Id) {
-    const element = document.getElementById(Id);
-    element.disabled = true;
-    
-}
+

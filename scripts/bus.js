@@ -1,13 +1,14 @@
 
 // hide show part
 function hiddenSection() {
+    const homeSection = document.getElementById('home');
+    homeSection.classList.add('hidden')
     const formSection = document.getElementById('form');
     formSection.classList.remove('hidden')
 }
 
 function showSection() {
-    const homeSection = document.getElementById('home');
-     homeSection.classList.add('hidden')
+   
     const formSection = document.getElementById('form');
     formSection.classList.add('hidden');
     const confirmSection = document.getElementById('confirm');
@@ -29,11 +30,18 @@ const allSeat = document.getElementsByClassName('bg-slate-300 rounded-xl text-ce
 let seatCount = 0;
 let seatLeft = 16;
 let count =0;
+let applyCount =0;
 
 for (const seat of allSeat ) {
     
     
     seat.addEventListener('click', function (event) {
+        const aptBtn = document.getElementById('apply-button');
+        applyCount = applyCount + 1;
+        if (applyCount == 4) {
+            aptBtn.removeAttribute('disabled');
+            
+        } 
         
         seat.removeEventListener('click', arguments.callee);
         count = count +1;
@@ -58,6 +66,19 @@ for (const seat of allSeat ) {
          seatTextArea.appendChild(p1);
         seatTextArea.appendChild(p2);
         seatTextArea.appendChild(p3); 
+        // const apBtn = document.getElementsByClassName('btn apply bg-[#1DD100] text-white')
+        // console.log(apBtn)
+
+        // if (parseInt(seatPrice)===1650) {
+        //     apBtn.removeAttribute('disabled');    
+        // }
+        // else{
+        //     apBtn.setAttribute('disabled', true);
+        // }
+
+
+            
+        
 
 // set price
         totalCost('total-price', parseInt(seatPrice))
@@ -77,15 +98,19 @@ for (const seat of allSeat ) {
 }
 // coupon part
 const applyButton =document.getElementById('apply-button');
-    applyButton.addEventListener('click', function (){
 
-        const couponApply = document.getElementById('input-field').value;
-        const couponCode = couponApply;
-        const CouponTwo = couponApply;
-        
-        if (couponCode === "NEW15" ) {
-            const discount15 = document.getElementById('discount-total');
-            const price = document.getElementById('total-price').innerText;
+
+applyButton.addEventListener('click', function (){
+    
+    
+    const couponApply = document.getElementById('input-field').value;
+    const couponCode = couponApply;
+    const CouponTwo = couponApply;
+    
+    
+    if (couponCode === "NEW15" ) {
+        const discount15 = document.getElementById('discount-total');
+        const price = document.getElementById('total-price').innerText;
             const total = parseInt(price);
             const discount15Amount =  total* 0.15;
             discount15.innerText = discount15Amount;
@@ -112,6 +137,8 @@ const applyButton =document.getElementById('apply-button');
         else{
             alert("Invalid Coupon");
         }
+
+       
         
     })
 

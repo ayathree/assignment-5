@@ -129,7 +129,7 @@
                                      
                                      <button class="btn">
                                         <img src="./images/seat-green.png" alt="">
-                                        <!--dynamic done-->
+                                        <!--dynamic-->
                                         <p class="text-[#1DD100]"><span id="seat-left">16</span> Seats left</p>
                                      </button>
                                     </div>
@@ -164,7 +164,7 @@
                     <div>
                         <img src="./images/fare.png" alt="">
                         <br>
-                        <!--dynamic done-->
+                        <!--dynamic-->
                         <h1 class="text-xl font-bold"><span id="seat-price">550</span> Taka</h1>
                         <br>
                         <p>Per seat</p>
@@ -225,20 +225,20 @@
                         <hr class="mb-5">
                         <div class="bg-slate-100 p-11 mb-5">
                            <div class="flex flex-row justify-between items-center ">
-                             <!--dynamic done-->
+                             <!--dynamic-->
                              <h1>seats <sup class="bg-[#1DD100] font-bold text-xl text-white p-1"><span id="seat-add">0</span></sup></h1>
                              <h1>Class</h1>
                              <h1>Price</h1>
                            </div>
                            <hr>
-                            <!--dynamic done-->
+                            <!--dynamic-->
                         <div id="seat-text-area" class= " grid grid-cols-3 gap-x-10">
 
                         </div>
                         <hr class="mb-5">
                         <div class="flex flex-row justify-between items-center mb-5">
                             <h1>Total Price</h1>
-                        <!--dynamic done-->
+                        <!--dynamic-->
                         <h1>BDT <span id="total-price"> 0</span></h1>
                         </div>
                         <div id="apply" class="mb-5 flex flex-row">
@@ -247,7 +247,7 @@
                             <!--dynamic-->
                             <button id="apply-button" onclick="hiddenDiscount()"  class="btn  bg-[#1DD100] text-white  " disabled>Apply</button>
                         </div>
-                        <!--dynamic done-->
+                        <!--dynamic-->
                         <div id="discount" class=" hidden" >
                            <div  class="flex flex-row justify-between items-center mb-5">
                             <h1>Discount Price</h1>
@@ -267,16 +267,16 @@
                             
 
 
-                    <input type="text" placeholder="Type here" class="input input-bordered input-sm w-full max-w-xs mb-5" />
+                    <input id="name" type="text" placeholder="Type here" class="input input-bordered input-sm w-full max-w-xs mb-5" />
                     <p  class="font-bold">Phone Number <sup class="text-2xl  text-red-600 ">*</sup></p>
                     <!--dynamic-->
                     <input id="phone-number" type="tel" oninput="phoneNumber()" placeholder="Type here" class="input input-bordered input-md w-full max-w-xs" />
                     <p class="font-bold">Email Id</p>
-                    <input type="text" placeholder="Type here" class="input input-bordered input-lg w-full max-w-xs" />
+                    <input id="email" type="text" placeholder="Type here" class="input input-bordered input-lg w-full max-w-xs" />
                 </div>
                 <br>
                 <!--dynamic-->
-                <button id="next-btn"  class="btn btn-wide bg-[#1DD100] text-white mb-5" disabled >Next</button>
+                <button id="next-btn" onclick="hidden2Section()" class="btn btn-wide bg-[#1DD100] text-white mb-5" disabled >Next</button>
                 <br>
 
                 <div class="flex flex-row items-center gap-10">
